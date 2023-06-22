@@ -3,7 +3,7 @@ import scrapy
 from ..items import TradingItem
 
 
-class CeghSpider(scrapy.Spider):
+class CeghDayAheadSpider(scrapy.Spider):
     name = "cegh_dayahead"
     
     def start_requests(self):
