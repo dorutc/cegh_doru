@@ -24,4 +24,9 @@ class TradingItem(scrapy.Item):
     trades = scrapy.Field()
     ceghedi = scrapy.Field()
     vwap_ceghix = scrapy.Field()
+	price = scrapy.Field()
+	product = scrapy.Field()
+	trading_phase = scrapy.Field()
+	best_bid = scrapy.Field()
+	best_ask = scrapy.Field()
     
