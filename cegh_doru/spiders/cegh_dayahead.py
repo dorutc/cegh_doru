@@ -4,7 +4,7 @@ from ..items import TradingItem
 
 
 class CeghSpider(scrapy.Spider):
-    name = "cegh"
+    name = "cegh_dayahead"
     
     def start_requests(self):
         url = 'https://www.cegh.at/wp-admin/admin-ajax.php'
