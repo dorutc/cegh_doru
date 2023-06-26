@@ -11,7 +11,7 @@ class CeghCSVWithinDaySpider(scrapy.Spider):
         url = 'https://www.cegh.at/wp-admin/admin-ajax.php'
         form_data={
             'action': 'get_MonathlyFutures',
-            'period': 'Month'
+            'period': 'Month',
             'product': 'monthly',
             'market': 'AT'
         }
