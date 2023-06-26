@@ -45,7 +45,7 @@ class DownfilesPipeline(FilesPipeline):
             file_name = 'AT_futures_Season_front-period_2_' + str
         if 'settlement' in request.url and 'Season' in request.url and 'front=3' in request.url:
             file_name = 'AT_futures_Season_front-period_3_' + str
-       if 'settlement' in request.url and 'Year' in request.url and 'front=1' in request.url:
+        if 'settlement' in request.url and 'Year' in request.url and 'front=1' in request.url:
             file_name = 'AT_futures_Year_front-period_1_' + str
         if 'settlement' in request.url and 'Year' in request.url and 'front=2' in request.url:
             file_name = 'AT_futures_Year_front-period_2_' + str
