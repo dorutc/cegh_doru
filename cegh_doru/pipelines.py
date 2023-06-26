@@ -7,6 +7,7 @@
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 from scrapy.pipelines.files import FilesPipeline
+from datetime import date
 
 
 class HelpDoruPipeline:
