@@ -29,7 +29,7 @@ class CeghWithinDaySpider(scrapy.Spider):
             trading_day, price, product, trading_phase, best_bid, best_ask, volume_acc = row.xpath('./td/text()').getall()
             trading_item["trading_day"] = trading_day.strip()
             trading_item["price"] = price.strip()
-            trading_item["product"]= prduct.strip() 
+            trading_item["product"]= product.strip() 
             trading_item["trading_phase"]= trading_phase.strip()
             trading_item["best_bid"]= best_bid.strip() 
             trading_item["best_ask"]= best_ask.strip() 
