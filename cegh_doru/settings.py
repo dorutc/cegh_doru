@@ -19,7 +19,7 @@ NEWSPIDER_MODULE = "cegh_doru.spiders"
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 ITEM_PIPELINES = {
-  'scrapy.pipelines.files.FilesPipeline': 1,
+  'cegh_doru.pipelines.DownfilesPipeline': 1,
 }
 FILES_STORE = r"/opt/app-root/src/doru/files_downloads"
 
