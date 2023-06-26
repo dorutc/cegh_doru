@@ -20,7 +20,7 @@ class CeghCSVMonthlyFuturesSpider(scrapy.Spider):
                                  formdata=form_data)
 
     def parse(self, response):
-        file_url = response.css('a[dat-front="1"]::attr(href)').get()
+        file_url = response.css('a[data-front="1"]::attr(href)').get()
         file_url = response.urljoin(file_url)
         item = DownfilesItem()
         item['file_urls'] = [file_url]
