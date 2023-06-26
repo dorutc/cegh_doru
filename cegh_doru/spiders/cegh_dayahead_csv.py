@@ -24,5 +24,6 @@ class CeghDayCSVAheadSpider(scrapy.Spider):
         item = DownfilesItem()
         item['file_urls'] = [file_url]
         today = date.today()
-        item['original_file_name'] = 'AT_day-ahead_' + today.strftime("%m/%d/%Y")
+        str = today.strftime("%d/%m/%Y")
+        item['original_file_name'] = 'AT_day-ahead_' + str
         yield item

@@ -19,6 +19,7 @@ class DownfilesPipeline(FilesPipeline):
     def file_path(self, request, response=None, info=None):
         file_name = 'default'
         today = date.today()
+        str = today.strftime("%d/%m/%Y")
         if 'day-ahead' in request.url:
-            file_name = 'AT_day-ahead_' + today.strftime("%m/%d/%Y")
+            file_name = 'AT_day-ahead_' + str
         return file_name
