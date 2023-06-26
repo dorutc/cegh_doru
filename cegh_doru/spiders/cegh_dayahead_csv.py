@@ -1,6 +1,7 @@
 import scrapy
 
 from ..items import DownfilesItem
+from datetime import date
 
 
 class CeghDayCSVAheadSpider(scrapy.Spider):
@@ -22,5 +23,6 @@ class CeghDayCSVAheadSpider(scrapy.Spider):
         file_url = response.urljoin(file_url)
         item = DownfilesItem()
         item['file_urls'] = [file_url]
-        item['original_file_name'] = file_url.split('/')[-1]
+		today = date.today()
+        item['original_file_name'] = 'AT_day-ahead_' + today.strftime("%m/%d/%Y")
         yield item
