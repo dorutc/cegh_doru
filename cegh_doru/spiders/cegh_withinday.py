@@ -26,7 +26,7 @@ class CeghWithinDaySpider(scrapy.Spider):
             print(f'Header is "{header}" with a unit of "{unit}"')
         for row in table_of_interest.xpath('./tr'):
             trading_item = TradingItem()
-            trading_day, price, product, trading_phase, best_bid, best_ask, volume_acc, _, _ , _ = row.xpath('./td/text()').getall()
+            trading_day, price, product, trading_phase, best_bid, best_ask, volume_acc = row.xpath('./td/text()').getall()
             trading_item["trading_day"] = trading_day.strip()
             trading_item["price"] = price.strip()
             trading_item["product"]= prduct.strip() 
