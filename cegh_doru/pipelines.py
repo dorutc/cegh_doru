@@ -22,4 +22,6 @@ class DownfilesPipeline(FilesPipeline):
         str = today.strftime("%d%m%Y")
         if 'day-ahead' in request.url:
             file_name = 'AT_day-ahead_' + str
+        if 'trades' in request.url:
+            file_name = 'AT_Within_Day_' + str
         return file_name
