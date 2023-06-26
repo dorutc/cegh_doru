@@ -24,6 +24,6 @@ class DownfilesPipeline(FilesPipeline):
             file_name = 'AT_day-ahead_' + str
         if 'trades' in request.url:
             file_name = 'AT_Within_Day_' + str
-        if 'settlement' in request.url and 'Month in request.url and 'front=1' in request.url:
+        if 'settlement' in request.url and 'Month' in request.url and 'front=1' in request.url:
             file_name = 'AT_futures_Month_front-period_1_' + str
         return file_name
