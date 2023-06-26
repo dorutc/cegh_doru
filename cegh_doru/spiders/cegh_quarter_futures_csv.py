@@ -4,8 +4,8 @@ from ..items import DownfilesItem
 from datetime import date
 
 
-class CeghCSVWithinDaySpider(scrapy.Spider):
-    name = "cegh_withinday_csv"
+class CeghCSVQuarterFuturesSpider(scrapy.Spider):
+    name = "cegh_quarter_futures_csv"
 	
     def start_requests(self):
         url = 'https://www.cegh.at/wp-admin/admin-ajax.php'
