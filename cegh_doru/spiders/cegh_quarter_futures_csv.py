@@ -44,3 +44,11 @@ class CeghCSVQuarterFuturesSpider(scrapy.Spider):
         str = today.strftime("%d%m%Y")
         item['original_file_name'] = 'AT_futures_Quarter_front-period_3_' + str
         yield item
+        file_url = response.css('a[data-front="4"]::attr(href)').get()
+        file_url = response.urljoin(file_url)
+        item = DownfilesItem()
+        item['file_urls'] = [file_url]
+        today = date.today()
+        str = today.strftime("%d%m%Y")
+        item['original_file_name'] = 'AT_futures_Quarter_front-period_4_' + str
+        yield item
