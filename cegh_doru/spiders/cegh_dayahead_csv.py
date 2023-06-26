@@ -18,7 +18,7 @@ class CeghDayCSVAheadSpider(scrapy.Spider):
                                  formdata=form_data)
 
     def parse(self, response):
-        file_url = response.css('a[class="ce-table__button btn btn--secondary btn--icon btn--icon--download exportButton"]').get()
+        file_url = response.css('a[class="ce-table__button btn btn--secondary btn--icon btn--icon--download exportButton"]::attr(href)').get()
         file_url = response.urljoin(file_url)
         item = DownfilesItem()
         item['file_urls'] = [file_url]
